@@ -2,11 +2,11 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import './test.less';
-class Test extends React.Component<{},null> {
+class Test extends React.Component<any,any> {
   render() {
     return (
       <div className="App">
-        types
+        react with typescript build by webpack successfully
       </div>
     );
   }
