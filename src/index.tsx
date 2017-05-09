@@ -1,15 +1,20 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
+import './index.less'
+import moduleA from './moduleA'
 
-import './test.less';
-class Test extends React.Component<any,any> {
-  render() {
-    return (
-      <div className="App">
-        react with typescript build by webpack successfully
-      </div>
-    );
-  }
+class Index extends React.Component<any, any> {
+    async componentWillMount () {
+        const res = await moduleA()
+        console.log(res)
+    }
+    render () {
+        return (
+            <div className="title">
+                <h2>React Webpack Typescript Template Success</h2>
+            </div>
+        )
+    }
 }
 
-ReactDOM.render(<Test />,document.getElementById("app"));
+ReactDOM.render(<Index/>, document.getElementById('app'))

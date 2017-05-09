@@ -1,2 +1,6 @@
 node_modules
-*.log
+*.js
+!nofile.js
+dist
+!*.config.js
+package-lock.json
